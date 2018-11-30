@@ -1,8 +1,8 @@
 require('dotenv').config()
 const Telegraf = require('telegraf')
-const bot = new Telegraf(process.env.TOKEN)
 const readline = require('readline')
 const fs = require('fs')
+const bot = new Telegraf(process.env.TOKEN)
 
 bot.start(async ctx => {
     const nome = ctx.update.message.from.first_name
