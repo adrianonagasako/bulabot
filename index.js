@@ -1,7 +1,7 @@
-require('dotenv').config()
 const Telegraf = require('telegraf')
 const readline = require('readline')
 const fs = require('fs')
+require('dotenv').config()
 const bot = new Telegraf(process.env.TOKEN)
 
 bot.start(async ctx => {
@@ -16,6 +16,8 @@ Para mostrar essa mensagem de boas vindas novamente,
 basta digitar /start.
 Obrigado pela sua visita.`)
 })
+
+
 const rl = readline.createInterface({
   input: fs.createReadStream('base de dados.txt')
 })
